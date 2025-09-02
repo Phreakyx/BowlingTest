@@ -42,7 +42,7 @@ void ALaunchBowlingPlayerController::SetupInputComponent()
             EIC->BindAction(IA_Primary, ETriggerEvent::Triggered, this, &ALaunchBowlingPlayerController::OnPrimary);
         }
     }
-}   
+}
 
 void ALaunchBowlingPlayerController::OnAim(const FInputActionValue& Value)
 {
