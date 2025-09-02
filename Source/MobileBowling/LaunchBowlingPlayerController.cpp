@@ -3,6 +3,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "Engine/EngineTypes.h"
+#include "Kismet/GameplayStatics.h"
 #include "BowlingBall.h"
 
 void ALaunchBowlingPlayerController::BeginPlay()
@@ -25,6 +26,14 @@ void ALaunchBowlingPlayerController::BeginPlay()
                 Subsys->AddMappingContext(IMC_Bowling, 0); // ensure non-null and added
             }
         }
+    }
+
+    TArray<AActor*> FoundActors;
+    UGameplayStatics::GetAllActorsOfClass(GetWorld(), ABowlingBall::StaticClass(), FoundActors);
+
+    if (FoundActors.Num() > 0)
+    {
+        BowlingBallBP_Ref = FoundActors[0];
     }
 }
 

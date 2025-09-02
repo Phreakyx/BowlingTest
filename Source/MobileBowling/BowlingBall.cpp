@@ -81,4 +81,5 @@ void ABowlingBall::ResetBall()
     SetActorTransform(ResetTransform, false, nullptr, ETeleportType::TeleportPhysics);
     ShowAimArrow(false);
     BowlingBall->SetSimulatePhysics(true); // if gameplay expects physics after reset
+    bIsShot = false;
 }

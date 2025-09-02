@@ -22,6 +22,7 @@ void ABowlingPin::ResetPin()
 {
     StaticMeshComponent->SetSimulatePhysics(false);
     SetActorTransform(ResetTransform, false, nullptr, ETeleportType::TeleportPhysics);
+    bWasHit = false;
 }
 
 void ABowlingPin::HideThePin()

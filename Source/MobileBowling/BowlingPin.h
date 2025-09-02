@@ -18,6 +18,9 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Bowling")
     FTransform ResetTransform;
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Bowling")
+    bool bWasHit;
+
     UFUNCTION(BlueprintCallable)
     void ResetPin();
     UFUNCTION(BlueprintCallable)
